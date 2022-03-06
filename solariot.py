@@ -42,6 +42,20 @@ import time
 import sys
 import re
 
+import tinytuya
+
+bulb = tinytuya.BulbDevice('bfc2a8ef3b4befd677dbmw', '192.168.4.41', 'c690cc786150d042')
+ir_blaster = tinytuya.OutletDevice('bff6eafc1e36d52561bfyu', '192.168.4.49', 'e3988da7d6278146')
+bulb.set_version(3.3)
+ir_blaster.set_version(3.3)
+brightness = 1000
+
+import sys
+import subprocess
+
+if 'darwin' in sys.platform:
+    print('Running \'caffeinate\' on MacOSX to prevent the system from sleeping')
+    subprocess.Popen('caffeinate')
 
 MIN_SIGNED   = -2147483648
 MAX_UNSIGNED =  4294967295
@@ -476,6 +490,7 @@ def save_json(inverter):
 
 # Core monitoring loop
 def scrape_inverter():
+    global brightness
     """ Connect to the inverter and scrape the metrics """
     client.connect()
 
@@ -517,6 +532,42 @@ def scrape_inverter():
     client.close()
 
     logging.info(inverter)
+
+    # brightnes = mx
+    # if inverter["export_power"] > 0:
+    #     export_power = 0
+    # else :
+    export_power = inverter["export_power"]
+    logging.warning("Export power: " + str(export_power))
+
+    brightness = (100 / -5000) * export_power
+    if brightness <= 1:
+        brightness = 1
+
+    if brightness >= 100:
+        brightness = 100
+
+    target_brightness = brightness
+    # current_brightness = bulb.brightness()
+    # logging.warning("Current brightness: " + str(current_brightness))
+
+    # difference = target_brightness - current_brightness
+    # for factor in range(5):
+        # smooth_brightness = current_brightness + (difference * factor / 5)
+        # logging.warning("Smooth brightness: " + str(smooth_brightness))
+
+    logging.warning("PV power: " + str(inverter["total_pv_power"]))
+    if (inverter["total_pv_power"] > 400):
+        bulb.set_brightness_percentage(target_brightness)
+        logging.warning("Target brightness: " + str(target_brightness))
+        if brightness <= 1:
+            bulb.turn_off()
+        else:
+            bulb.turn_on()
+    
+    ir_data = ir_blaster.status()  
+    logging.info("Temperature: " + str(ir_data['dps']['101'] / 10))
+    logging.info("Humidity: " + str(ir_data['dps']['102']))
     return True
 
 while True:

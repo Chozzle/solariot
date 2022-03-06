@@ -1,0 +1,130 @@
+{
+    "result": [
+        {
+            "active_time": 1645688983,
+            "biz_type": 0,
+            "category": "infrared_ac",
+            "create_time": 1645688983,
+            "icon": "smart/icon/001453365846342fhj9e/11c62df7bd89c10f43d3e5ee8d13b4f4.png",
+            "id": "bf8326bb3e3274a8e4olcd",
+            "ip": "",
+            "lat": "-27.5329",
+            "local_key": "e3988da7d6278146",
+            "lon": "153.0502",
+            "model": "",
+            "name": "Air Con",
+            "node_id": "a67237deab40c8c6",
+            "online": true,
+            "owner_id": "51455942",
+            "product_id": "qzktzhehinzsz2je",
+            "product_name": "Air Conditioning",
+            "status": [],
+            "sub": true,
+            "time_zone": "+10:00",
+            "uid": "eu1645271454693rFPiH",
+            "update_time": 1645688983,
+            "uuid": "bf8326bb3e3274a8e4olcd"
+        },
+        {
+            "active_time": 1645687855,
+            "biz_type": 0,
+            "category": "infrared_tv",
+            "create_time": 1645687855,
+            "icon": "smart/icon/001453365846342fhj9e/2234434f86d00a26359b2a9e5e967640.png",
+            "id": "bf38d0ee27bfc69bfcsaww",
+            "ip": "",
+            "lat": "-27.5329",
+            "local_key": "e3988da7d6278146",
+            "lon": "153.0502",
+            "model": "",
+            "name": "TV",
+            "node_id": "4df833ddd23045f6",
+            "online": true,
+            "owner_id": "51455942",
+            "product_id": "lplun31mo1xaonwz",
+            "product_name": "TV",
+            "status": [],
+            "sub": true,
+            "time_zone": "+10:00",
+            "uid": "eu1645271454693rFPiH",
+            "update_time": 1645687855,
+            "uuid": "bf38d0ee27bfc69bfcsaww"
+        },
+        {
+            "active_time": 1645687300,
+            "biz_type": 0,
+            "category": "wnykq",
+            "create_time": 1645687300,
+            "icon": "smart/icon/ay1525749833414yotNt/a2c8c945413706b5f1223202ae4e895a.png",
+            "id": "bff6eafc1e36d52561bfyu",
+            "ip": "203.123.108.103",
+            "lat": "-27.5329",
+            "local_key": "e3988da7d6278146",
+            "lon": "153.0502",
+            "model": "S06ProWR3E",
+            "name": "Smart IR",
+            "online": true,
+            "owner_id": "51455942",
+            "product_id": "fsqblaletrqhffun",
+            "product_name": "Smart IR",
+            "status": [],
+            "sub": false,
+            "time_zone": "+10:00",
+            "uid": "eu1645271454693rFPiH",
+            "update_time": 1645687304,
+            "uuid": "0637522a3f294f28"
+        },
+        {
+            "active_time": 1645271600,
+            "biz_type": 0,
+            "category": "dj",
+            "create_time": 1643789283,
+            "icon": "smart/icon/bay1592287241913nbIt/b13fee0e9ab3cb93320ac30521c9cc16.png",
+            "id": "bfc2a8ef3b4befd677dbmw",
+            "ip": "203.123.108.103",
+            "lat": "-27.5329",
+            "local_key": "c690cc786150d042",
+            "lon": "153.0502",
+            "model": "",
+            "name": "Living Room lamp",
+            "online": true,
+            "owner_id": "51455942",
+            "product_id": "pssiunvropmxvjuw",
+            "product_name": "Brilliant 3000K",
+            "status": [
+                {
+                    "code": "switch_led",
+                    "value": false
+                },
+                {
+                    "code": "work_mode",
+                    "value": "white"
+                },
+                {
+                    "code": "bright_value_v2",
+                    "value": 19
+                },
+                {
+                    "code": "scene_data_v2",
+                    "value": "{\"scene_num\":1,\"scene_units\":[{\"bright\":10,\"h\":0,\"s\":0,\"temperature\":1000,\"unit_change_mode\":\"static\",\"unit_gradient_duration\":13,\"unit_switch_duration\":13,\"v\":0}]}"
+                },
+                {
+                    "code": "countdown_1",
+                    "value": 0
+                },
+                {
+                    "code": "control_data",
+                    "value": ""
+                }
+            ],
+            "sub": false,
+            "time_zone": "+10:00",
+            "uid": "eu1645271454693rFPiH",
+            "update_time": 1645271603,
+            "uuid": "2ffce10d1173a8ba"
+        }
+    ],
+    "success": true,
+    "t": 1645771455438,
+    "tid": "593c9e6a960611ecb018e66f3a529df6"
+}
